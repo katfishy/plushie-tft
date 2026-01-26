@@ -1,23 +1,19 @@
 using UnityEngine;
-using System;
-using System.Collections.Generic;
-using Unit;
-
 public class Squidge : Unit
 {
     [SerializeField] private readonly string unitName = "Squidge";
-    private readonly string[] traits = ["Katie's", "Ocean", "Secretly Evil"];
+    private readonly string[] traits = { "Katie's", "Ocean", "Secretly Evil" };
+    private readonly int price = 5;
 
-    protected override Start()
+    protected override void Start()
     {
-        maxHPArray = [100, 150, 200];
-        attackDamageArray = [5, 10, 15];
-        attackSpeedArray = [0.3, 0.5, 0.7];
+        maxHPArray = new[] { 100, 150, 200 };
+        attackDamageArray = new[] { 5, 10, 15 };
+        attackSpeedArray = new[] { 0.3f, 0.5f, 0.7f };
 
         base.Start();
     }
     
-
 
 }
 
